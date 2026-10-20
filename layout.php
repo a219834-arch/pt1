@@ -13,7 +13,7 @@
                 </div>
                 
                 <div class="p-4">
-                    <?php echo isset($content) ? $content : 'Put content here.'; ?>
+                    <?= $content ?? '' ?>
                 </div>
             </div>
 

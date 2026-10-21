@@ -31,23 +31,18 @@ ob_start();
 
         <form action="" method="post" class="needs-validation" novalidate>
             <div class="row g-3">
-                
-                <!-- Row 1 -->
                 <div class="col-md-3">
                     <label for="pid" class="form-label">Product ID <span class="text-danger" aria-hidden="true">*</span></label>
-                    <input name="product_num" id="pid" type="text" class="form-control" placeholder="Enter Product ID" required>
+                    <input name="product_num" id="pid" type="text" class="form-control" placeholder="Enter Product ID" value="" required>
                 </div>
-
                 <div class="col-md-3">
                     <label for="name" class="form-label">Name <span class="text-danger" aria-hidden="true">*</span></label>
-                    <input name="product_name" id="name" type="text" class="form-control" placeholder="Enter Product Name" required>
+                    <input name="product_name" id="name" type="text" class="form-control" placeholder="Enter Product Name" value="" required>
                 </div>
-
                 <div class="col-md-3">
                     <label for="price" class="form-label">Price (RM) <span class="text-danger" aria-hidden="true">*</span></label>
-                    <input name="product_price" id="price" type="number" class="form-control" placeholder="Enter Price" required min="0" step="0.01">
+                    <input name="product_price" id="price" type="number" class="form-control" placeholder="Enter Price" value="" required min="0" step="0.01">
                 </div>
-
                 <div class="col-md-3">
                     <label for="brand" class="form-label">Brand <span class="text-danger" aria-hidden="true">*</span></label>
                     <select name="product_brand" id="brand" class="form-select" required>
@@ -60,7 +55,6 @@ ob_start();
                     </select>
                 </div>
 
-                <!-- Row 2 -->
                 <div class="col-md-3">
                     <label for="material" class="form-label">Material <span class="text-danger" aria-hidden="true">*</span></label>
                     <select name="product_material" id="material" class="form-select" required>
@@ -86,14 +80,12 @@ ob_start();
 
                 <div class="col-md-3">
                     <label for="quantity" class="form-label">Quantity <span class="text-danger" aria-hidden="true">*</span></label>
-                    <input name="product_quantity" id="quantity" type="number" class="form-control" placeholder="Enter Quantity" required min="0">
+                    <input name="product_quantity" id="quantity" type="number" class="form-control" placeholder="Enter Quantity" value="" required min="0">
                 </div>
-
                 <div class="col-md-3">
                     <label for="product_image" class="form-label">Image</label>
-                    <input name="product_image" id="product_image" type="text" class="form-control" placeholder="Enter image filename">
+                    <input name="product_image" id="product_image" type="text" class="form-control" placeholder="Enter image filename" value="">
                 </div>
-
             </div>
             
             <hr class="mt-4 mb-3">
@@ -107,6 +99,60 @@ ob_start();
                 </button>
             </div>
         </form>
+    </div>
+</div>
+
+<!-- Product List Table Card -->
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        <div class="row align-items-center mb-3">
+            <div class="col">
+                <h5 class="mb-0">
+                    <i class="bi bi-table text-primary me-2"></i>
+                    Product List
+                </h5>
+                <small class="text-muted">View and manage all products in the inventory</small>
+            </div>
+            <div class="col-auto">
+                <span class="badge bg-success">Total: 1 items</span>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Brand</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>P001</td>
+                        <td>Sisal Tower Post</td>
+                        <td>RM 120.00</td>
+                        <td>Catit</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-warning">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                            <button type="button" class="btn btn-sm btn-info text-white">
+                                <i class="bi bi-image"></i>
+                            </button>
+                            <a href="#" class="btn btn-sm btn-danger">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 

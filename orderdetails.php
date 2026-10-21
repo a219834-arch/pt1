@@ -48,6 +48,53 @@ ob_start();
     </div>
 </div>
 
+<!-- Part 3: Products in Order Table Card -->
+<div class="card shadow-sm">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0"><i class="bi bi-table text-primary me-2"></i>Products in Order</h5>
+            <a href="invoice.php" class="btn btn-success"><i class="bi bi-receipt me-1"></i>View Invoice</a>
+        </div>
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Product</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sisal Tower Post</td>
+                        <td>RM 120.00</td>
+                        <td>1</td>
+                        <td>RM 120.00</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></a>
+                            <a href="#" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-center text-muted">No products added to this order</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3" class="text-end">Grand Total</th>
+                        <th>RM 120.00</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <a href="orders.php" class="btn btn-secondary mt-2"><i class="bi bi-arrow-left me-1"></i>Back to Orders</a>
+    </div>
+</div>
+
 <?php
 $content = ob_get_clean();
 require_once 'layout.php';
